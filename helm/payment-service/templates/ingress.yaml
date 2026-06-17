@@ -2,5 +2,17 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: payment-service
+  annotations:
+    kubernetes.io/ingress.class: alb
 spec:
-  rules: []
+  rules:
+  - host: payment.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: payment-service
+            port:
+              number: 80
