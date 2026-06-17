@@ -1,0 +1,5 @@
+image:
+  repository: YOUR_ECR_REPO
+  tag: latest
+service:
+  port: 8080
