@@ -1,7 +1,8 @@
 replicaCount: 2
+
 image:
-  repository: payment-service
-  tag: v1
+  repository: 885412329878.dkr.ecr.us-east-1.amazonaws.com/payment-service
+  tag: latest
   pullPolicy: Always
 
 service:
